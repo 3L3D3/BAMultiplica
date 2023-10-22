@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 2.7em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.25em;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: 1.25em;
+}
+
+button {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 1000px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: green;
+}
+
+button:hover {
+  background-color: #30ff01;
+}
+
+.container {
+  margin: auto;
+}
+
+.color-acento {
+  color: green;
+}
+
+header {
+  background-color: rgb(20, 20, 20);
+}
+
+header .logo {
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: white;
+  font-size: 1.6em;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+nav {
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+header a:hover {
+  color: green;
+}
+
+#hero {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 97.4vh;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.carousel-container {
+}
+
+.carousel-container img {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 10s ease;
+}
+
+/*desplazamiento automático */
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+.carousel-container img {
+  animation: carousel 30s infinite;
+}
+
+/* Estilos para el encabezado h1 */
+.hero-content {
+  position: absolute;
+  top: 75%; /* corregí el texto  con respecto a su altura */
+  /* left: 89%; */ /* corregí el texto trasladado a la izquierda */
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2; /* indiqué la prioridad del texto sobre el carousel */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* padding: 20%; */
+}
+
+#hero h1 {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-left: 90%;
+  transform: translate(-50%, -60%);
+  color: white;
+  z-index: 2; /* Aseguré el encabezado esté sobre el carrusel */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.button-ingresá {
+  display: flex;
+  font-size: 1.9em;
+  margin-left: 100%;
+  /* margin-right: 130%; */ /*no me tomó el flex* le agregué un margin con porcentaje para que me centrara el botón*/
+  align-items: center;
+}
+
+#librecodigo .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+
+#codealo {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
+
+#codealo .container {
+  padding: 150px 12px;
+}
+
+#codealo h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#codealo p {
+  display: none;
+}
+
+#codealo .carta {
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.carta:first-child {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("imagenes/python.png");
+}
+
+.carta:nth-child(2) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("imagenes/c++.png");
+}
+
+.carta:nth-child(3) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("imagenes/java.png");
+}
+
+#caracteristicas .container {
+  text-align: center;
+  padding: 250px 12px;
+}
+
+#caracteristicas li {
+  margin: 16px 0px;
+  font-weight: bold;
+}
+
+#final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  height: 80vh;
+}
+
+#final h2 {
+  font-size: 9vw;
+}
+
+#final button {
+  font-size: 5vw;
+}
+
+footer {
+  background-color: rgb(230, 230, 230);
+}
+
+footer p {
+  margin: 0;
+  padding: 12px;
+  color: rgb(100, 100, 100);
+}
+
+footer .container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media (min-width: 850px) {
+  header {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+  }
+
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+
+  #hero h1 {
+    font-size: 3.5em;
+  }
+
+  #librecodigo .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #librecodigo .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #librecodigo h2 {
+    margin-top: 0px;
+  }
+
+  #librecodigo .img-container {
+    background-image: url("imagenes/librecodigo.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+  }
+
+  #codealo .programas {
+    display: flex;
+    justify-content: center;
+  }
+
+  #codealo p {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  #codealo h2 {
+    font-size: 4em;
+  }
+
+  #codealo h3 {
+    margin-top: 0;
+  }
+
+  #codealo .carta {
+    padding: 50px;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgba(50, 50, 50, 1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("imagenes/python.png");
+  }
+
+  .carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("imagenes/c++.png");
+  }
+
+  .carta:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("imagenes/java.png");
+  }
+
+  #caracteristicas {
+    background-image: url("imagenes/robotito.jpg");
+    background-repeat: no-repeat;
+    background-size: 500px 400px;
+    background-position: calc(100vw - 500px) 120px;
+  }
+
+  #caracteristicas .container {
+    text-align: initial;
+  }
+
+  #caracteristicas ul {
+    margin-left: 100px;
+  }
+
+  #final h2 {
+    font-size: 5em;
+  }
+
+  #final button {
+    font-size: 2em;
+  }
+
+  footer .container {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  #caracteristicas {
+    background-position-x: calc(100vw - 800px);
+  }
+}
