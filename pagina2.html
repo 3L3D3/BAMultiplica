@@ -1,96 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>LibreCódigo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="pagina2.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css">
+    <title>LibreCódigo - Registro e Inicio de Sesión</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <p class="logo">Libre<span class="color-acento">Código</span></p>
-            <nav>
-                <a href="#librecodigo">Quienes Somos</a>
-                <a href="#codealo">Codealo</a>
-                <a href="#caracteristicas">Características</a>
-            </nav>
-        </div>
-    </header>
-
     <main>
-
-        <section id="hero">
-            <div class="carousel-container">
-                <img src="imagenes/prograpiola.jpg" alt="">
-                <img src="imagenes/javajuegos.jpg" alt="">
-                <img src="imagenes/estadisticaspiton.png" alt="">
-                <img src="imagenes/robocmasmas.png" alt="">
-            </div>
-            <div class="hero-content">
-                <h1>Todo el código, <br>en un mismo lugar</h1>
-                <button class="button-ingresá">Ingresá</button>
-            </div>
-            
-        </section>
-
-        <section id="librecodigo">
-            <div class="container">
-                <div class="img-container"></div>
-                <div class="texto">
-
-                    <h2>Todo <span class="color-acento">LibreCódigo</span></h2>
-                    <p>Repositorio de los lenguajes mas demandados según el índice tiobe y actualización de recursos en base a las tendencias y votos de los integrantes del foro.</p>
+        <section>
+            <div class="container-form register">
+                <div class="information">
+                    <div class="info-childs">
+                        <h2>Bienvenido</h2>
+                        <p>Para unirte a nuestra comunidad, por favor, iniciá sesión con tus datos</p>
+                        <input type="button" value="Iniciar Sesión" id="sign-in">
+                    </div>
+                </div>
+                <div class="form-information">
+                    <div class="form-information-childs">
+                        <h2>Crear una cuenta</h2>
+                        <div class="icons">
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-github'></i>
+                            <i class='bx bxl-linkedin' ></i>
+                        </div>
+                        <p>o usá tu email para registrarte</p>
+                        <form class="form">
+                            <label>
+                                <i class='bx bx-user' ></i>
+                                <input type="text" placeholder="Nombre Completo">
+                            </label>
+                            <label>
+                                <i class='bx bx-envelope' ></i>
+                                <input type="email" placeholder="Correo Electronico">
+                            </label>
+                            <label>
+                                <i class='bx bx-lock-alt' ></i>
+                                <input type="password" placeholder="Contraseña">
+                            </label>
+                            <input type="submit" value="Registrarse">
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section id="codealo">
-            <div class="container">
-                <h2>Lenguajes mas demandados</h2>
-                <div class="programas">
-                    <div class="carta">
-                        <h3>Python</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                        <button>+ Info</button>
+        <section>
+            <div class="container-form login hide">
+                <div class="information">
+                    <div class="info-childs">
+                        <h2>Bienvenido nuevamente</h2>
+                        <p>Para unirte a nuestra comunidad, por favor, iniciá sesión con tus datos</p>
+                        <input type="button" value="Registrarse" id="sign-up">
                     </div>
-                    <div class="carta">
-                        <h3>C++</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                        <button>+ Info</button>
+                </div>
+                <div class="form-information">
+                    <div class="form-information-childs">
+                        <h2>Iniciar Sesión</h2>
+                        <div class="icons">
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-github'></i>
+                            <i class='bx bxl-linkedin' ></i>
+                        </div>
+                        <p>o iniciar sesión con una cuenta</p>
+                        <form class="form">
+                            <label>
+                                <i class='bx bx-envelope' ></i>
+                                <input type="email" placeholder="Correo Electronico">
+                            </label>
+                            <label>
+                                <i class='bx bx-lock-alt' ></i>
+                                <input type="password" placeholder="Contraseña">
+                            </label>
+                            <input type="submit" value="Iniciar Sesión">
+                        </form>
                     </div>
-                    <div class="carta">
-                        <h3>java</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                        <button>+ Info</button>
-                    </div>  
                 </div>
             </div>
         </section>
-
-        <section id="caracteristicas">
-            <div class="container">
-                <ul>
-                    <li>✔️ 100% online </li>
-                    <li>✔️ Soporte activo 24/7</li>
-                    <li>✔️ Actualización de repositorios</li>
-                    <li>✔️ Nuevos cursos mediante votos</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="final">
-            <h2>Este es el momento para programar...</h2>
-            <button>Ingresá</button>
-        </section>
-        
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; TodoCodigoArgentina</p>
-        </div>
-    </footer>
+    <script src="script2.js"></script>
 </body>
 </html>

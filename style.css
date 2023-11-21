@@ -157,26 +157,28 @@ header a:hover {
 /* Estilos para el encabezado h1 */
 .hero-content {
   position: absolute;
-  top: 75%; /* corregí el texto  con respecto a su altura */
-  /* left: 89%; */ /* corregí el texto trasladado a la izquierda */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  z-index: 2; /* indiqué la prioridad del texto sobre el carousel */
+  z-index: 2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
-  /* padding: 20%; */
+  padding: 0 20px; /* Ajuste del espaciado lateral */
+}
+.hero-content h1 {
+  font-size: 2em;
 }
 
 #hero h1 {
-  width: 100%;
   position: absolute;
-  top: 20%;
-  left: 10%;
-  margin-left: 90%;
+  top: 70%;
+  width: 100%;
+  margin-left: 100%;
   transform: translate(-50%, -60%);
   color: white;
   z-index: 2; /* Aseguré el encabezado esté sobre el carrusel */
@@ -186,11 +188,15 @@ header a:hover {
 }
 
 .button-ingresá {
-  display: flex;
-  font-size: 1.9em;
-  margin-left: 100%;
-  /* margin-right: 130%; */ /*no me tomó el flex* le agregué un margin con porcentaje para que me centrara el botón*/
-  align-items: center;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 1000px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: green;
+  margin-top: 400px; /* Espaciado superior para separar del texto */
 }
 
 #librecodigo .container {
@@ -299,6 +305,21 @@ footer .container {
 }
 
 @media (min-width: 850px) {
+  #hero h1 {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    margin-left: 100%;
+    transform: translate(-50%, -60%);
+    color: white;
+    z-index: 2; /* Aseguré el encabezado esté sobre el carrusel */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+  .button-ingresá {
+    margin-top: 400px;
+  }
   header {
     z-index: 3;
     position: fixed;
